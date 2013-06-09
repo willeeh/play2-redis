@@ -20,11 +20,17 @@ public class ManagerImpl implements Manager
     {
         Jedis jedis = jedisPool.getResource();
 
-        jedis.set(
-                entity.getRepositoryName() + jedis.incr(entity.getCounterRepositoryName()),
-                JsonUtil.toJson(entity)
-        );
+        try
+        {
+            jedis.set(
+                    entity.getRepositoryName() + jedis.incr(entity.getCounterRepositoryName()),
+                    JsonUtil.toJson(entity)
+            );
+        }
+        finally
+        {
+            jedisPool.returnResource(jedis);
+        }
 
-        jedisPool.returnResource(jedis);
     }
 }
