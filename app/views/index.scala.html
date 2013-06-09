@@ -1,0 +1,16 @@
+@(form: Form[model.User])
+
+@main("Univit.org") {
+    
+    @helper.form(routes.Application.register) {
+       <h2>Déjanos tu email para avisarte cuando Univit.org esté listo:</h2>
+
+       <p>
+           <input type="email" name="email" placeholder="Email" value="@form("email").value">
+       </p>
+       <p>
+           <button type="submit">Registrarme</button>
+       </p>
+    }
+    
+}
