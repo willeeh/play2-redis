@@ -24,5 +24,7 @@ public class ManagerImpl implements Manager
                 entity.getRepositoryName() + jedis.incr(entity.getCounterRepositoryName()),
                 JsonUtil.toJson(entity)
         );
+
+        jedisPool.returnResource(jedis);
     }
 }
