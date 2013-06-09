@@ -1,0 +1,36 @@
+body {
+    background-color: #000;
+    background-image: url(../images/protest_2.jpg);
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.encourage
+{
+    font-size: 20px;
+    position: absolute;
+    right: 150px;
+    top: 50px;
+    width: 500px;
+}
+
+.join
+{
+    position: absolute;
+    right: 150px;
+    top: 300px;
+}
+
+.email-tip
+{
+    margin-bottom: 0px;
+}
+
+.email
+{
+    width: 350px;
+}

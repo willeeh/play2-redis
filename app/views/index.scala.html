@@ -1,16 +1,25 @@
 @(form: Form[model.User])
 
 @main("Univit.org") {
-    
+    <div class="encourage">
+        <p>
+        ¿Alguna vez te has enterado demasiado tarde de alguna manifestación, protesta, o cualquier convocatoria social que te hubiera gustado apoyar?
+        </p>
+        <p>
+        ¿Alguna vez has sentido que una persona sola no puede hacer nada?
+        </p>
+        <p>
+        No estás solo/a: Únete.
+        </p>
+    </div>
     @helper.form(routes.Application.register) {
-       <h2>Déjanos tu email para avisarte cuando Univit.org esté listo:</h2>
+        <div class="join">
+           <p class="email-tip">Déjanos tu email para avisarte cuando Univit.org esté listo</p>
 
-       <p>
-           <input type="email" name="email" placeholder="Email" value="@form("email").value">
-       </p>
-       <p>
-           <button type="submit">Registrarme</button>
-       </p>
+           <input class="email" type="email" name="email" placeholder="Email" value="@form("email").value">
+
+           <button class="btn btn-large btn-block btn-primary" type="submit">Registrarme</button>
+        </div>
     }
     
 }
