@@ -1,0 +1,1 @@
+web: target/start -Dhttp.port=${PORT} ${JAVA_OPTS} -DapplyEvolutions.default=true -Dredis.username=redistogo -Dredis.password=7bedcac88caedb8cfabea1b9df6bf807 -Dredis.host=cod.redistogo.com -Dredis.port=10376

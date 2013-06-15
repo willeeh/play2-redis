@@ -2,6 +2,7 @@ package module;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
+import play.Configuration;
 import play.Play;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -25,22 +26,39 @@ public class ApplicationModule extends AbstractModule
     {
         try
         {
-            URI redisURI = new URI(System.getenv("REDISTOGO_URL"));
+            /*Configuration configuration = Play.application().configuration().getConfig("redis");
+
+            String uri = "redis://";
+
+            if ( configuration.getString("hostname") != null )
+            {
+                uri += "{username}:{password}@";
+
+                uri = uri.replace("{username}",  configuration.getString("hostname"))
+                         .replace("{password}",  configuration.getString("password"));
+            }
+
+            uri += "{host}:{port}";
+
+            uri = uri.replace("{host}",      configuration.getString("host"))
+                     .replace("{port}",      configuration.getString("port"));
+
+            URI redisURI = new URI(uri);
 
             return new JedisPool(
                 new JedisPoolConfig(),
                 redisURI.getHost(),
                 redisURI.getPort(),
                 Protocol.DEFAULT_TIMEOUT,
-                redisURI.getUserInfo().split(":",2)[1]);
+                redisURI.getUserInfo().split(":",2)[1]);*/
 
-            /*return new JedisPool(
+            return new JedisPool(
                 new JedisPoolConfig(),
                 Play.application().configuration().getConfig("redis").getString("hostname"),
-                Play.application().configuration().getConfig("redis").getInt("port") );*/
+                Play.application().configuration().getConfig("redis").getInt("port") );
 
         }
-        catch (URISyntaxException e)
+        catch (Exception e)
         {
             //TODO
             // URI couldn't be parsed. Handle exception

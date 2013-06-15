@@ -9,28 +9,84 @@ body {
     background-size: cover;
 }
 
+.inner {
+    position: relative;
+    padding: 0 20px;
+    min-width: 500px;
+    max-width: 1050px;
+    margin: 0 auto;
+
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.inner .right
+{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    display: block;
+    width: 540px;
+}
+
+.inner .thanks
+{
+    max-width: 800px;
+    min-width: 350px;
+    position: absolute;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 100px;
+    background-color: rgba(26,188,156,.5);
+    color: #ffffff;
+}
+
 .encourage
 {
-    font-size: 20px;
-    position: absolute;
-    right: 150px;
-    top: 50px;
-    width: 500px;
+    text-align: justify;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgba(26,188,156,.5);
+    color: #ffffff;
+}
+
+.encourage > p {
+    margin: 0px;
+    padding: 10px 0px;
+}
+
+.encourage > p.catchword {
+    font-weight: bold;
+    color: #34495e;
 }
 
 .join
 {
-    position: absolute;
-    right: 150px;
-    top: 300px;
+    background-color: rgba(26,188,156,.5);
+    padding: 10px 15px;
 }
 
 .email-tip
 {
-    margin-bottom: 0px;
+    margin: 0px;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    color: #ffffff;
 }
 
 .email
 {
-    width: 350px;
+    width: 355px;
 }
+
+span.highligthed
+{
+    color: #34495e;
+    font-weight: bold;
+}
+

@@ -1,25 +1,30 @@
 @(form: Form[model.User])
 
-@main("Univit.org") {
-    <div class="encourage">
-        <p>
-        ¿Alguna vez te has enterado demasiado tarde de alguna manifestación, protesta, o cualquier convocatoria social que te hubiera gustado apoyar?
-        </p>
-        <p>
-        ¿Alguna vez has sentido que una persona sola no puede hacer nada?
-        </p>
-        <p>
-        No estás solo/a: Únete.
-        </p>
-    </div>
-    @helper.form(routes.Application.register) {
-        <div class="join">
-           <p class="email-tip">Déjanos tu email para avisarte cuando Univit.org esté listo</p>
-
-           <input class="email" type="email" name="email" placeholder="Email" value="@form("email").value">
-
-           <button class="btn btn-large btn-block btn-primary" type="submit">Registrarme</button>
+@main("vokem.org") {
+    <div class="right">
+        <div class="encourage">
+            <p class="catchword">
+            Unidos por una sociedad más justa.
+            </p>
+            <p>
+            ¿Alguna vez te has perdido una manifestación o recogida de firmas en la que hubieras participado?
+            </p>
+            <p>
+            ¿Querrías organizar algún evento de protesta y que llegue a todas las personas interesadas?
+            </p>
+            <p>
+            <span class="highligthed">Vokem</span> ayuda a que los ciudadanos nos coordinemos y unamos nuestras fuerzas para lograr un mundo mejor.
+            </p>
         </div>
-    }
+        @helper.form(routes.Application.register) {
+            <div class="join">
+               <p class="email-tip">Déjanos tu email para avisarte cuando vokem.org esté listo</p>
+
+               <input class="email" type="email" name="email" placeholder="Email" value="@form("email").value">
+
+               <button class="btn btn-large btn-block btn-primary" type="submit">Registrarme</button>
+            </div>
+        }
+    </div>
     
 }

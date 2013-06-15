@@ -31,6 +31,11 @@ public class Application extends Controller
             //TODO
         }
 
-        return ok();
+        return ok(sent.render());
+    }
+
+    public Result sent()
+    {
+        return ok(sent.render());
     }
 }
