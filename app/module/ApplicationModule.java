@@ -43,19 +43,21 @@ public class ApplicationModule extends AbstractModule
             uri = uri.replace("{host}",      configuration.getString("host"))
                      .replace("{port}",      configuration.getString("port"));
 
-            URI redisURI = new URI(uri);
+            URI redisURI = new URI(uri);*/
+
+            URI redisURI = new URI(System.getenv("REDISTOGO_URL"));
 
             return new JedisPool(
                 new JedisPoolConfig(),
                 redisURI.getHost(),
                 redisURI.getPort(),
                 Protocol.DEFAULT_TIMEOUT,
-                redisURI.getUserInfo().split(":",2)[1]);*/
+                redisURI.getUserInfo().split(":",2)[1]);
 
-            return new JedisPool(
+            /*return new JedisPool(
                 new JedisPoolConfig(),
                 Play.application().configuration().getConfig("redis").getString("hostname"),
-                Play.application().configuration().getConfig("redis").getInt("port") );
+                Play.application().configuration().getConfig("redis").getInt("port") );*/
 
         }
         catch (Exception e)
