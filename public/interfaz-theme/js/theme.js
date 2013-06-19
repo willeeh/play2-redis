@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 	
 	//Form Validation
-	$(".theme-form").each(function() {
+	$(".theme-form form").each(function() {
 		$(this).validate();
 	});
 	

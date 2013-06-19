@@ -49,6 +49,10 @@ body {
 	height: 580px;
 }
 
+.sign-up-form label.error {
+	visibility: hidden;
+}
+
 /* Landscape phones and down */
 @media (max-width: 766px) {
 
