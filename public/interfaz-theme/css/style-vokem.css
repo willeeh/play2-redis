@@ -4,6 +4,10 @@ body {
 	background-size: cover;
 }
 
+.lock-header h4 {
+	top: 0px;
+}
+
 .header-main h1, .call-to-action h1, .uh-oh h1, .header-main-phone h1 {
 	color: #3a743a;
 	text-shadow: 0 0 10px #ffffff;
@@ -29,6 +33,16 @@ body {
 
 .feature-icon {
 	font-size: 50px;
+}
+
+.share-links a:hover {
+	text-decoration: none;
+}
+
+.share-links i {
+	font-size: 40px;
+	color: #131813;
+	padding: 5px;
 }
 
 .home-container {
