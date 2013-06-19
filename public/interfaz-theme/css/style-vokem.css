@@ -29,3 +29,11 @@ body {
 .home-container {
 	height: 580px;
 }
+
+/* Landscape phones and down */
+@media (max-width: 766px) {
+
+	.home-container {
+		height: 300px;
+	}
+}
