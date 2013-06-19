@@ -4,14 +4,18 @@ body {
 	background-size: cover;
 }
 
-.header-main h1, .header-main-phone h1 {
+.header-main h1, .call-to-action h1, .uh-oh h1, .header-main-phone h1 {
 	color: #3a743a;
-	text-shadow: 0 0 3px #ffffff;
+	text-shadow: 0 0 10px #ffffff;
+}
+
+.register-text {
+	text-shadow: 0 0 5px #121912;
 }
 
 .header-main h4, .header-main-phone h4 {
 	color: #3a743a;
-	text-shadow: 0 0 3px #ffffff;
+	text-shadow: 0 0 5px #ffffff;
 }
 
 .full-width-features p {
