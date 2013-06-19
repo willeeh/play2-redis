@@ -18,7 +18,7 @@ public class Application extends Controller
 
     public Result index()
 	{
-        return ok( index.render(form(User.class)) );
+        return ok( index2.render(form(User.class)) );
     }
 
     public Result register()
@@ -31,11 +31,11 @@ public class Application extends Controller
             //TODO
         }
 
-        return ok(sent.render());
+        return ok(sent2.render());
     }
 
     public Result sent()
     {
-        return ok(sent.render());
+        return ok(sent2.render());
     }
 }

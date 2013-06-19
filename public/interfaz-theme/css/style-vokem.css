@@ -1,0 +1,31 @@
+body {
+	background: url(../../images/protest_2.jpg) no-repeat top center #b1d95c;
+	background-attachment: fixed;
+}
+
+.header-main h1, .header-main-phone h1 {
+	color: #3a743a;
+	text-shadow: 0 0 3px #ffffff;
+}
+
+.header-main h4, .header-main-phone h4 {
+	color: #3a743a;
+	text-shadow: 0 0 3px #ffffff;
+}
+
+.full-width-features p {
+	font-size: 15px;
+}
+
+.full-width-features h3 {
+	font-size: 30px;
+	color: #759443;
+}
+
+.feature-icon {
+	font-size: 50px;
+}
+
+.home-container {
+	height: 580px;
+}

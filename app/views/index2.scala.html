@@ -1,0 +1,116 @@
+@(form: Form[model.User])
+
+@main2("vokem.org") {
+
+	<!-- TOP MENU -->
+	<div class="lock-header hidden-phone">
+		<div class="container">
+			<div class="row">
+				<div class="span4 offset2">
+					<h4>Comparte vokem.org</h4>
+				</div>
+				<div class="span4">
+					<a href="http://facebook.com" target="_blank"><img src="@routes.Assets.at("interfaz-theme/images/Facebook.png")" alt="Facebook"></a>
+					<a href="http://twitter.com" target="_blank"><img src="@routes.Assets.at("interfaz-theme/images/Twitter.png")" alt="Twitter"></a>
+					<a href="http://pinterest.com" target="_blank"><img src="@routes.Assets.at("interfaz-theme/images/Pinterest.png")" alt="Pinterest"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-wrapper">
+		<div class="agency-wrap">
+			<div class="container page-container home-container">
+				<div class="row">
+					<div class="span12">
+						<div class="top-nav">
+							<!-- Contact button at top right that shows the contact form (not included in this template)
+							<ul class="nav hidden-phone">
+								<li>
+									<a href="#contact" class="contact-link">CONTACT</a>
+								</li>
+							</ul>
+							-->
+						</div>
+
+						<!-- TOP PAGE DISPLAY -->
+
+						<!-- Page for desktop -->
+
+						<div class="header-main hidden-phone">
+							<h4>
+								¿Quieres cambiar el mundo y no sabes cómo?
+							</h4>
+							<br>
+							<h1>
+								vokem.org
+							</h1>
+							<br>
+							@helper.form(routes.Application.register) {
+								<div class="theme-form sign-up-form">
+									<input type="email" name="email" id="email" class="email required" placeholder="email" value="" title="">
+									<input type="submit" value="Participar">
+								</div>
+							}
+						</div>
+
+						<!-- Page for phone -->
+
+						<div class="header-main-phone visible-phone">
+							<h4>
+								¿Quieres mejorar el mundo <br> y no sabes cómo?
+							</h4>
+							<br>
+							<h1>
+								vokem.org
+							</h1>
+							@helper.form(routes.Application.register) {
+								<div class="theme-form sign-up-form">
+									<input type="email" name="email" id="email" class="email required" value="" placeholder="email">
+									<input type="submit" value="Apúntame">
+								</div>
+							}
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="#feature-set" class="down-tab hidden-phone" name="feature-set">
+			MÁS INFORMACIÓN<i class="arrow arrow-down">&nbsp;</i>
+		</a>
+
+		<!-- SERVICES SECTION -->
+
+		<div class="full-width-features feature-1">
+			<div class="container">
+				<div class="row">
+					<div class="span4">
+						<i class="feature-icon icon-comments"></i>
+						<h3>Entérate</h3>
+						<p>
+							Te avisaremos cuando se organice una manifestación, recogida de firmas
+							o cualquier otra convocatoria social en la que quieras participar.
+						</p>
+					</div>
+					<div class="span4">
+						<i class="feature-icon icon-bullhorn"></i>
+						<h3>Organiza</h3>
+						<p>
+							Podrás organizar convocatorias que lleguen rápidamente a todo el mundo.
+						</p>
+					</div>
+					<div class="span4">
+						<i class="feature-icon icon-group"></i>
+						<h3>Participa</h3>
+						<p>
+							Somos mayoría. Sólo necesitábamos unirnos.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+}
