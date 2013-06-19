@@ -47,7 +47,7 @@ $(document).ready(function() {
 	
 	
 	/* Lock Form in Scroll */
-	$('.down-tab, .reasons-wrap .theme-blurb h3 span').waypoint(function(event, direction) {
+	$('.header-main.hidden-phone, .down-tab, .reasons-wrap .theme-blurb h3 span').waypoint(function(event, direction) {
 	   if (direction === 'down') {
 	      $('.lock-header').animate({
 		    top: '0'
