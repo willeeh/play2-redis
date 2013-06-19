@@ -1,6 +1,7 @@
 body {
 	background: url(../../images/protest_2.jpg) no-repeat top center #b1d95c;
 	background-attachment: fixed;
+	background-size: cover;
 }
 
 .header-main h1, .header-main-phone h1 {
