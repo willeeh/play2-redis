@@ -45,18 +45,21 @@ public class ApplicationModule extends AbstractModule
 
             URI redisURI = new URI(uri);*/
 
-            //URI redisURI = new URI(System.getenv("REDISTOGO_URL"));
-        	URI redisURI = new URI("redis://localhost:6379");
+        	// TODO: Remoto:
+        	URI redisURI = new URI(System.getenv("REDISTOGO_URL"));
+        	// TODO: Local:
+        	//URI redisURI = new URI("redis://localhost:6379");	TODO: Local/Remoto
 
-        	/*
+        	
+            // TODO: Remoto:
             return new JedisPool(
                 new JedisPoolConfig(),
                 redisURI.getHost(),
                 redisURI.getPort(),
                 Protocol.DEFAULT_TIMEOUT,
                 redisURI.getUserInfo().split(":",2)[1]);
-            */
-        	return new JedisPool(new JedisPoolConfig(), "localhost");
+            // TODO: Local:
+            //return new JedisPool(new JedisPoolConfig(), "localhost");
 
             /*return new JedisPool(
                 new JedisPoolConfig(),
